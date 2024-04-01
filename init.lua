@@ -220,9 +220,9 @@ vim.keymap.set('v', 'H', '^', { desc = 'Move cursor to start of line [^]' })
 vim.keymap.set('s', 'H', '^', { desc = 'Move cursor to start of line [^]' })
 vim.keymap.set('o', 'H', '^', { desc = 'Move cursor to start of line [^]' })
 vim.keymap.set('n', 'L', '$', { desc = 'Move cursor to end of line [$]' })
-vim.keymap.set('v', 'H', '$', { desc = 'Move cursor to end of line [$]' })
-vim.keymap.set('s', 'H', '$', { desc = 'Move cursor to end of line [$]' })
-vim.keymap.set('o', 'H', '$', { desc = 'Move cursor to end of line [$]' })
+vim.keymap.set('v', 'L', '$', { desc = 'Move cursor to end of line [$]' })
+vim.keymap.set('s', 'L', '$', { desc = 'Move cursor to end of line [$]' })
+vim.keymap.set('o', 'L', '$', { desc = 'Move cursor to end of line [$]' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
