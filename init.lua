@@ -868,6 +868,13 @@ require('lazy').setup({
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
+
+      require('mini.indentscope').setup {
+        draw = {
+          delay = 0,
+          animation = require('mini.indentscope').gen_animation.none(),
+        },
+      }
     end,
   },
 
