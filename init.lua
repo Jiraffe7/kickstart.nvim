@@ -132,6 +132,8 @@ vim.keymap.set('n', '<leader>cc', function()
   vim.fn.setreg('+', vim.fn.getreg '0')
 end, { desc = 'Move from yank register to the clipboard register' })
 
+vim.keymap.set('v', '<leader>cc', '"+y', { desc = 'Yank to the clipboard register' })
+
 -- Enable break indent
 vim.opt.breakindent = true
 
