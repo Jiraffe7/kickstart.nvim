@@ -176,7 +176,7 @@ vim.opt.scrolloff = 10
 -- Toggle between most recently used buffers.
 vim.keymap.set('n', '<leader><leader>', '<C-^>', { desc = '[ ] Toggle between most recently used buffers' })
 
-vim.keymap.set('n', '<leader>w', vim.cmd.write, { desc = 'Save file [:w]' })
+-- vim.keymap.set('n', '<leader>w', vim.cmd.write, { desc = 'Save file [:w]' })
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = 'Undotree toggle' })
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
