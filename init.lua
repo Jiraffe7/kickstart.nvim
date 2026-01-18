@@ -649,6 +649,13 @@ require('lazy').setup({
           map('gra', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction', { 'n', 'x' })
 
+          map('grf', function()
+            vim.lsp.buf.code_action {
+              context = { only = { 'source.fixAll' } },
+              apply = true,
+            }
+          end, '[G]oto Code Action [Fix]')
+
           -- Find references for the word under your cursor.
           map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
 
