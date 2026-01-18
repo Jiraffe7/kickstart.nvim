@@ -313,10 +313,10 @@ require('lazy').setup({
         harpoon:list():add()
       end, { desc = '[H]arpoon [A]ppend to list of files' })
       vim.keymap.set('n', '<leader>hh', function()
-        harpoon:list()
+        harpoon.ui:toggle_quick_menu(harpoon:list())
       end, { desc = '[H]arpoon [H]arpoon list files' })
       vim.keymap.set('n', '<C-h>', function()
-        harpoon.ui:toggle_quick_menu(harpoon:list())
+        harpoon:list():select(4)
       end)
 
       vim.keymap.set('n', '<C-j>', function()
@@ -343,7 +343,7 @@ require('lazy').setup({
   },
 
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-  'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
+  { 'NMAC427/guess-indent.nvim', opts = {} }, -- Detect tabstop and shiftwidth automatically
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -660,6 +660,7 @@ require('lazy').setup({
           --  This is where a variable was first declared, or where a function is defined, etc.
           --  To jump back, press <C-t>.
           map('grd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
+          map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
 
           -- WARN: This is not Goto Definition, this is Goto Declaration.
           --  For example, in C this would take you to the header.
